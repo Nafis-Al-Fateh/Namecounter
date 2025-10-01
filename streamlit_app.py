@@ -8,7 +8,7 @@ student = st.text_input("Please Input Your Name:")
 
 if student:  # only run when input is given
     # Dictionary: each character and how many times it appears
-    dictionary = {ch: student.count(ch) for ch in student}
+    dictionary = {ch: student.count(ch)}
 
     # Show results
     st.write("### Your Name:")
