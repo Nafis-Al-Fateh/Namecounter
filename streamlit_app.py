@@ -1,6 +1,18 @@
 import streamlit as st
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+# Title
+st.title("Character Counter App")
+
+# Input from user
+student = st.text_input("Please Input Your Name:")
+
+if student:  # only run when input is given
+    # Dictionary: each character and how many times it appears
+    dictionary = {ch: student.count(ch) for ch in student}
+
+    # Show results
+    st.write("### Your Name:")
+    st.write(student)
+
+    st.write("### Character Count Dictionary:")
+    st.json(dictionary)  # pretty display
